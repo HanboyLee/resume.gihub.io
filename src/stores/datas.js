@@ -89,7 +89,7 @@ export const skills = {
         {
             id: uuidv4(),
             skill: "其它",
-            content: ["Git版本管控", "webpack", "Bootstrap", "Material UI"],
+            content: ["Git", "Webpack", "Bootstrap", "Material UI"],
         },
     ],
 };
@@ -112,5 +112,5 @@ export const learning = {
     id: uuidv4(),
     title: "学习中技能",
     enTitle: "works",
-    text: "webpack 仍觉得有不足之处，使用自余时间学习，加强语法熟悉度及应用。",
+    text: "Webpack 仍觉得有不足之处，使用自余时间学习，加强语法熟悉度及应用。",
 };

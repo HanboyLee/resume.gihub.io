@@ -21,17 +21,29 @@ const Home = () => {
                 </Mtl.Grid>
                 <Mtl.Grid item xs={12} md={8}>
                     <IntroduceContent elevation={3}>
-                        <Mtl.Box className="nameBox" flex={1}>
-                            <Mtl.Typography variant="h3">李升翰</Mtl.Typography>
-                            <Mtl.Typography component={"div"} variant="h6">
-                                Han
-                            </Mtl.Typography>
-                        </Mtl.Box>
+                        <Mtl.Grid container className="infoContent">
+                            <Mtl.Grid item xs={12} sm={5} className="nameBox">
+                                <Mtl.Typography variant="h3">李升翰</Mtl.Typography>
+                                <Mtl.Typography className="enName" variant="h6">
+                                    Han
+                                </Mtl.Typography>
+                            </Mtl.Grid>
+                            <Mtl.Grid className={"infoBox"} item xs={12} sm={5}>
+                                <Mtl.Typography component={"div"} variant="body1">
+                                    出生年月：1988.04
+                                </Mtl.Typography>
+                                <Mtl.Typography component={"div"} variant="body1">
+                                    籍贯：中国台湾
+                                </Mtl.Typography>
+                                <Mtl.Typography component={"div"} variant="body1">
+                                    性别：男
+                                </Mtl.Typography>
+                            </Mtl.Grid>
+                        </Mtl.Grid>
                         <Mtl.Box flex={1} className="introduceBox">
                             <Subject datas={introduce} />
                             <Mtl.Typography variant="body1">{introduce.content}</Mtl.Typography>
                         </Mtl.Box>
-                        <Mtl.Box flex={1}></Mtl.Box>
                     </IntroduceContent>
                 </Mtl.Grid>
             </Mtl.Grid>
@@ -57,24 +69,40 @@ const ImageBox = styled(Mtl.Box)`
     }
 `;
 const IntroduceContent = styled(Mtl.Box)`
-    height: 100%;
     display: flex;
-    height: 100%;
     flex-direction: column;
-    & > .nameBox {
-        display: flex;
-        justify-content: flex-start;
+    justify-content: center;
+    & > .infoContent {
+        justify-content: center;
         align-items: center;
-        padding-top: ${({ theme }) => theme.spacing(2)};
-        padding-bottom: ${({ theme }) => theme.spacing(2)};
-
-        @media (min-width: 600px) {
+        text-align: center;
+        .nameBox {
+            display: flex;
             justify-content: center;
-        }
-        & > div {
+            align-items: center;
             padding-top: ${({ theme }) => theme.spacing(2)};
-            padding-left: ${({ theme }) => theme.spacing(1)};
-            color: #888;
+            padding-bottom: ${({ theme }) => theme.spacing(2)};
+
+            @media (min-width: 600px) {
+                justify-content: center;
+            }
+            .enName {
+                padding-top: ${({ theme }) => theme.spacing(2)};
+                padding-left: ${({ theme }) => theme.spacing(1)};
+                color: #888;
+            }
+        }
+        .infoBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            @media (max-width: 600px) {
+                align-items: center;
+            }
+            & > div {
+                display: inline-block;
+            }
         }
     }
     & > .introduceBox {

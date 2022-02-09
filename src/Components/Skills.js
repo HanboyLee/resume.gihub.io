@@ -29,11 +29,11 @@ const SkillItem = ({ data }) => {
                 <SkillItemTitle style={theme.shape} variant="h6">
                     {data.skill}
                 </SkillItemTitle>
-                <SkillDetail>
+                <SkillDetail container>
                     {data.content.map((item, index) => (
-                        <div key={index} style={theme.typography.body2}>
+                        <Grid xs={12} sm={5} className="text" item key={index} style={theme.typography.body2}>
                             {item}
-                        </div>
+                        </Grid>
                     ))}
                 </SkillDetail>
             </Paper>
@@ -46,11 +46,9 @@ const SkillItemTitle = styled(Typography)`
     color: ${({ theme }) => theme.palette.background.default};
     background-color: ${({ theme }) => theme.palette.text.primary};
 `;
-const SkillDetail = styled.div`
-    list-style: none;
-    text-align: center;
-    margin: 0 auto;
-    & > div {
+const SkillDetail = styled(Grid)`
+    justify-content: center;
+    & > .text {
         padding-top: ${({ theme }) => theme.spacing(0.5)};
         padding-bottom: ${({ theme }) => theme.spacing(0.5)};
         letter-spacing: 0.5px !important;

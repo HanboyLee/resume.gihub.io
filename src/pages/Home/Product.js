@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import Subject from "../../Components/Subject";
-import { useMediahandle } from "../../Hooks/MediaHook";
 
 const Product = ({ datas }) => {
     return (
@@ -31,7 +30,7 @@ const Project = ({ data }) => {
                     <Typography className="title" variant="h6">
                         {data.title}
                     </Typography>
-                    <Typography variant="body1">使用技術：</Typography>
+                    <Typography variant="body1">使用技术：</Typography>
                     <ul>
                         {data.art.map((item, i) => (
                             <li key={i}>{item}</li>
