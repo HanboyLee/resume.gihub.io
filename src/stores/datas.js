@@ -1,7 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-
 import ReactSimpleQR from "../asset/images/products/qrcode.png";
-
+// images
+import profileQrcode from "../asset/images/profileQrcode.jpg";
+//icons
+import { WechatIcon } from "../asset/images/icons";
+import { AiFillWechat } from "react-icons/ai";
+import { GitHub, Facebook } from "@mui/icons-material";
 export const introduce = {
     id: uuidv4(),
     title: "介绍",
@@ -111,6 +115,12 @@ export const products = {
 export const learning = {
     id: uuidv4(),
     title: "学习中技能",
-    enTitle: "works",
+    enTitle: "Works",
     text: "Webpack 仍觉得有不足之处，使用自余时间学习，加强语法熟悉度及应用。",
 };
+
+export const contact = [
+    { id: uuidv4(), IconSvg: AiFillWechat, method: true, src: profileQrcode },
+    { id: uuidv4(), IconSvg: GitHub, method: false, src: "https://github.com/HanboyLee" },
+    { id: uuidv4(), IconSvg: Facebook, method: false, src: "https://www.facebook.com/sheng.han.921" },
+];

@@ -2,8 +2,9 @@ import React from "react";
 import * as Mtl from "@mui/material";
 import profile from "../../asset/images/profile.jpg";
 import styled from "styled-components";
-import { introduce, experience, education, skills, products, learning } from "../../stores/datas";
+import { introduce, experience, education, skills, products, learning, contact } from "../../stores/datas";
 //components
+import Contact from "./Contact";
 import TimeLines from "../../Components/TimeLines";
 import Skills from "../../Components/Skills";
 import Product from "./Product";
@@ -18,6 +19,7 @@ const Home = () => {
                     <ImageBox>
                         <img className="img" src={profile} alt="profile" />
                     </ImageBox>
+                    <Contact datas={contact} />
                 </Mtl.Grid>
                 <Mtl.Grid item xs={12} md={8}>
                     <IntroduceContent elevation={3}>

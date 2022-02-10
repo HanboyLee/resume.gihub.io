@@ -22,7 +22,7 @@ const SkillBox = styled(Box)`
 
 const SkillItem = ({ data }) => {
     const theme = useTheme();
-    console.log(theme);
+
     return (
         <Grid item paddingY={3} sm={5} xs={12}>
             <Paper style={{ padding: 10 }} elevation={5}>
