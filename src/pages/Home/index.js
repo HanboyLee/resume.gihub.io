@@ -53,7 +53,7 @@ const Home = () => {
             <TimeLines datas={education} />
             <Skills datas={skills} />
             <Product datas={products} />
-            <Learning datas={learning} />
+            {/* <Learning datas={learning} /> */}
             <Footer />
         </Mtl.Box>
     );
