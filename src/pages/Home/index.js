@@ -49,6 +49,7 @@ const Home = () => {
                     </IntroduceContent>
                 </Mtl.Grid>
             </Mtl.Grid>
+
             <TimeLines datas={experience} />
             <TimeLines datas={education} />
             <Skills datas={skills} />

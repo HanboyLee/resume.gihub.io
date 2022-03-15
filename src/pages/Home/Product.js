@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import Subject from "../../Components/Subject";
+import QRCode from "qrcode.react";
 
 const Product = ({ datas }) => {
     return (
@@ -16,21 +17,24 @@ const Product = ({ datas }) => {
 
 const Project = ({ data }) => {
     const onClick = () => {
-        window.location.assign(data.githubUrl);
+        window.open(data.githubUrl, "_block");
+    };
+    const onGitCoode = () => {
+        window.open(data.codeUrl, "_block");
     };
     return (
         <ProjectItem container>
-            <Grid item xs={12} sm={5}>
+            <Grid className="qrcodeWrap" item xs={12} sm={3}>
                 <Box className="imgBox" onClick={onClick}>
-                    <img src={data.src} alt={data.title} />
+                    <QRCode className="qrcode" level="H" value={data.githubUrl} />
                 </Box>
             </Grid>
             <Grid item sm={5}>
                 <Box>
-                    <Typography className="title" variant="h6">
+                    <Typography onClick={onGitCoode} className="title" variant="h6">
                         {data.title}
                     </Typography>
-                    <Typography variant="body1">使用技术：</Typography>
+                    <Typography variant="body1">技术栈：</Typography>
                     <ul>
                         {data.art.map((item, i) => (
                             <li key={i}>{item}</li>
@@ -48,24 +52,44 @@ const ProductBox = styled(Box)`
 
 const ProjectItem = styled(Grid)`
     width: 100%;
-    padding-top: ${({ theme }) => theme.spacing(2)};
+    padding-top: ${({ theme }) => theme.spacing(5)};
     margin: 0 auto;
     justify-content: center;
-    & .imgBox {
-        width: 50%;
-        margin: 0 auto;
-        cursor: pointer;
-        & > img {
-            width: 100%;
+    & .qrcodeWrap {
+        @media (max-width: 600px) {
+            text-align: center;
+        }
+        .imgBox {
+            margin: 0 auto;
+            cursor: pointer;
+            display: inline-block;
+            .qrcode {
+                width: 200px !important;
+                height: 200px !important;
+            }
         }
     }
+
     & .title {
         padding-top: ${({ theme }) => theme.spacing(1)};
         padding-bottom: ${({ theme }) => theme.spacing(3)};
+        color: blue;
+        cursor: pointer;
+        display: inline-block;
+        :hover {
+            color: skyblue;
+        }
+        @media (max-width: 600px) {
+            text-align: center;
+        }
     }
     ul {
         list-style: none;
-        & > li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        li {
+            flex-basis: 33%;
             padding: ${({ theme }) => theme.spacing(1)};
         }
     }

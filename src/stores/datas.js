@@ -1,9 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
-import ReactSimpleQR from "../asset/images/products/qrcode.png";
+
 // images
 import profileQrcode from "../asset/images/profileQrcode.jpg";
 //icons
-import { WechatIcon } from "../asset/images/icons";
 import { AiFillWechat } from "react-icons/ai";
 import { GitHub, Facebook } from "@mui/icons-material";
 export const introduce = {
@@ -93,7 +92,7 @@ export const skills = {
         {
             id: uuidv4(),
             skill: "其它",
-            content: ["Git", "Webpack", "Bootstrap", "Material UI"],
+            content: ["Git", "Webpack", "Bootstrap", "Material UI", "Antd", "WebSocket"],
         },
     ],
 };
@@ -105,13 +104,23 @@ export const products = {
     content: [
         {
             id: uuidv4(),
-            src: ReactSimpleQR,
+            src: "https://hanboylee.github.io/resume.gihub.io/",
             title: "React Simple",
-            githubUrl: " https://hanboylee.github.io/staticWebWithBootstrap.gihub.io/",
+            githubUrl: "https://hanboylee.github.io/resume.gihub.io/",
+            codeUrl: "https://github.com/HanboyLee/staticWebWithBootstrap.gihub.io",
             art: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
+        },
+        {
+            id: uuidv4(),
+            title: "模仿网易云web项目",
+            src: "https://netease-music-demo.vercel.app",
+            codeUrl: "https://github.com/HanboyLee/NeteaseMusicDemo",
+            githubUrl: "https://netease-music-demo.vercel.app",
+            art: ["HTML", "CSS", "JavaScript", "React", "Antd", "Redux", "Redux-toolkit", "Axios"],
         },
     ],
 };
+
 export const learning = {
     id: uuidv4(),
     title: "学习中技能",

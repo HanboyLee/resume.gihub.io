@@ -12,6 +12,7 @@ function App() {
                     <Mtl.Container
                         maxWidth="lg"
                         style={{
+                            padding: 0,
                             background: "radial-gradient(circle, rgba(135,135,149,1) 14%, rgba(176,176,176,1) 69%)",
                         }}
                     >

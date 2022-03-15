@@ -22,9 +22,8 @@ const SkillBox = styled(Box)`
 
 const SkillItem = ({ data }) => {
     const theme = useTheme();
-
     return (
-        <Grid item paddingY={3} sm={5} xs={12}>
+        <Grid item paddingY={3} sm={5} xs={11}>
             <Paper style={{ padding: 10 }} elevation={5}>
                 <SkillItemTitle style={theme.shape} variant="h6">
                     {data.skill}
@@ -40,6 +39,7 @@ const SkillItem = ({ data }) => {
         </Grid>
     );
 };
+
 const SkillItemTitle = styled(Typography)`
     display: inline-block;
     padding: ${({ theme }) => theme.spacing(1)};
@@ -48,7 +48,8 @@ const SkillItemTitle = styled(Typography)`
 `;
 const SkillDetail = styled(Grid)`
     justify-content: center;
-    & > .text {
+    min-height: 100px;
+    & .text {
         padding-top: ${({ theme }) => theme.spacing(0.5)};
         padding-bottom: ${({ theme }) => theme.spacing(0.5)};
         letter-spacing: 0.5px !important;
