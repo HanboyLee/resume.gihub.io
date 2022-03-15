@@ -104,9 +104,9 @@ export const products = {
     content: [
         {
             id: uuidv4(),
-            src: "https://hanboylee.github.io/resume.gihub.io/",
+            src: "https://hanboylee.github.io/staticWebWithBootstrap.gihub.io/",
             title: "React Simple",
-            githubUrl: "https://hanboylee.github.io/resume.gihub.io/",
+            githubUrl: "https://hanboylee.github.io/staticWebWithBootstrap.gihub.io/",
             codeUrl: "https://github.com/HanboyLee/staticWebWithBootstrap.gihub.io",
             art: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
         },
