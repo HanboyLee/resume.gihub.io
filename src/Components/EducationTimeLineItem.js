@@ -16,7 +16,7 @@ const EducationTimeLineItem = ({ data }) => {
                 {data.startsAt} ~ {data.endsAt}
             </TimelineOppositeContent>
             <TimelineSeparator>
-                <TimelineDot />
+                <TimelineDot color="primary" />
                 <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>

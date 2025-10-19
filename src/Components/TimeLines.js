@@ -1,6 +1,6 @@
 import React from "react";
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from "@mui/lab";
-import { Box, Typography } from "@mui/material";
+import { Timeline } from "@mui/lab";
+import { Box } from "@mui/material";
 import styled from "styled-components";
 import ExperienceTimeLineItem from "./ExperienceTimeLineItem";
 import EducationTimeLineItem from "./EducationTimeLineItem";

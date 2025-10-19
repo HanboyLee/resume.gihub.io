@@ -1,7 +1,6 @@
-import { Box, Button, Icon } from "@mui/material";
+import { Box, Icon } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import clsx from "clsx";
 import { useMediahandle } from "../../Hooks/MediaHook";
 import { debounce } from "../../units/commonHelper";
 

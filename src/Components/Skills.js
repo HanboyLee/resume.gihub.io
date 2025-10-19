@@ -24,7 +24,7 @@ const SkillItem = ({ data }) => {
     const theme = useTheme();
     return (
         <Grid item paddingY={3} sm={5} xs={11}>
-            <Paper style={{ padding: 10 }} elevation={5}>
+            <Card elevation={4}>
                 <SkillItemTitle style={theme.shape} variant="h6">
                     {data.skill}
                 </SkillItemTitle>
@@ -35,10 +35,20 @@ const SkillItem = ({ data }) => {
                         </Grid>
                     ))}
                 </SkillDetail>
-            </Paper>
+            </Card>
         </Grid>
     );
 };
+
+const Card = styled(Paper)`
+    padding: ${({ theme }) => theme.spacing(2)};
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: ${({ theme }) => theme.shape.borderRadius}px;
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: ${({ theme }) => theme.shadows[6]};
+    }
+`;
 
 const SkillItemTitle = styled(Typography)`
     display: inline-block;
