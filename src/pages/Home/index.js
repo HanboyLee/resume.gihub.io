@@ -2,14 +2,13 @@ import React from "react";
 import * as Mtl from "@mui/material";
 import profile from "../../asset/images/profile.jpg";
 import styled from "styled-components";
-import { introduce, experience, education, skills, products, learning, contact } from "../../stores/datas";
+import { introduce, experience, education, skills, products, contact } from "../../stores/datas";
 //components
 import Contact from "./Contact";
 import TimeLines from "../../Components/TimeLines";
 import Skills from "../../Components/Skills";
 import Product from "./Product";
 import Subject from "../../Components/Subject";
-import Learning from "./Learning";
 import Footer from "./Footer";
 const Home = () => {
     return (
@@ -68,13 +67,18 @@ const ImageBox = styled(Mtl.Box)`
         width: 100%;
         object-fit: cover;
         object-position: 50% 50%;
-        border-radius: 10px;
+        border-radius: 12px;
+        border: 4px solid #fff;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
 `;
-const IntroduceContent = styled(Mtl.Box)`
+const IntroduceContent = styled(Mtl.Paper)`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: ${({ theme }) => theme.spacing(3)};
+    border-radius: ${({ theme }) => theme.shape.borderRadius}px;
+    background-color: ${({ theme }) => theme.palette.background.paper};
     & > .infoContent {
         justify-content: center;
         align-items: center;
@@ -85,14 +89,15 @@ const IntroduceContent = styled(Mtl.Box)`
             align-items: center;
             padding-top: ${({ theme }) => theme.spacing(2)};
             padding-bottom: ${({ theme }) => theme.spacing(2)};
-
             @media (min-width: 600px) {
                 justify-content: center;
             }
             .enName {
-                padding-top: ${({ theme }) => theme.spacing(2)};
+                padding-top: ${({ theme }) => theme.spacing(1)};
                 padding-left: ${({ theme }) => theme.spacing(1)};
-                color: #888;
+                color: ${({ theme }) => theme.palette.text.secondary};
+                letter-spacing: 1px;
+                text-transform: uppercase;
             }
         }
         .infoBox {

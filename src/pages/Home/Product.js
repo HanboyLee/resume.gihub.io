@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import Subject from "../../Components/Subject";
 import QRCode from "qrcode.react";
@@ -17,10 +17,10 @@ const Product = ({ datas }) => {
 
 const Project = ({ data }) => {
     const onClick = () => {
-        window.open(data.githubUrl, "_block");
+        window.open(data.githubUrl, "_blank");
     };
     const onGitCoode = () => {
-        window.open(data.codeUrl, "_block");
+        window.open(data.codeUrl, "_blank");
     };
     return (
         <ProjectItem container>
@@ -73,11 +73,11 @@ const ProjectItem = styled(Grid)`
     & .title {
         padding-top: ${({ theme }) => theme.spacing(1)};
         padding-bottom: ${({ theme }) => theme.spacing(3)};
-        color: blue;
+        color: ${({ theme }) => theme.palette.primary.main};
         cursor: pointer;
         display: inline-block;
         :hover {
-            color: skyblue;
+            color: ${({ theme }) => theme.palette.primary.light};
         }
         @media (max-width: 600px) {
             text-align: center;

@@ -27,6 +27,8 @@ const TitleBox = styled(Box)`
     }
     & > :nth-child(2) {
         padding-left: ${({ theme }) => theme.spacing(3)};
-        color: #ccc;
+        color: ${({ theme }) => theme.palette.text.secondary};
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
     }
 `;

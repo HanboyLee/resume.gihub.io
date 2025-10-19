@@ -6,13 +6,14 @@ const Footer = () => {
     return (
         <>
             <Divider sx={{ pt: 5 }} />
-            <FooterContiner textAlign={"center"} variant="body1">
-                Copyright &copy; 2022 简历
+            <FooterContiner textAlign={"center"} variant="body2">
+                {`Copyright © ${new Date().getFullYear()} 简历`}
             </FooterContiner>
         </>
     );
 };
 const FooterContiner = styled(Typography)`
     padding: ${({ theme }) => theme.spacing(3)};
+    color: ${({ theme }) => theme.palette.text.secondary};
 `;
 export default Footer;
