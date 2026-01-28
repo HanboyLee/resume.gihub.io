@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/resume.gihub.io/static/js/main.4852910f.js",
+    "main.js": "/resume.gihub.io/static/js/main.39714439.js",
     "static/js/787.883ba16e.chunk.js": "/resume.gihub.io/static/js/787.883ba16e.chunk.js",
     "static/media/profileQrcode.jpg": "/resume.gihub.io/static/media/profileQrcode.dbd21c24d166bee3c9dd.jpg",
     "static/media/profile.jpg": "/resume.gihub.io/static/media/profile.254f839a2865c79a00cd.jpg",
     "index.html": "/resume.gihub.io/index.html",
-    "main.4852910f.js.map": "/resume.gihub.io/static/js/main.4852910f.js.map",
+    "main.39714439.js.map": "/resume.gihub.io/static/js/main.39714439.js.map",
     "787.883ba16e.chunk.js.map": "/resume.gihub.io/static/js/787.883ba16e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4852910f.js"
+    "static/js/main.39714439.js"
   ]
 }
