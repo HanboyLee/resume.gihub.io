@@ -7,15 +7,17 @@ import EducationTimeLineItem from "./EducationTimeLineItem";
 
 //components
 import Subject from "./Subject";
+
 const Experience = ({ datas }) => {
-    const TimeItem = React.useMemo(() => (datas.isExp ? ExperienceTimeLineItem : EducationTimeLineItem), [datas.isExp]);
+    const TimeItem = React.useMemo(
+        () => (datas.isExp ? ExperienceTimeLineItem : EducationTimeLineItem),
+        [datas.isExp]
+    );
 
     return (
         <TimeLineBox>
-            {/* 主題 */}
             <Subject datas={datas} />
-            {/* 時間軸 */}
-            <Timeline position="alternate">
+            <Timeline position="alternate" sx={{ p: 0 }}>
                 {datas.content.map((item) => (
                     <TimeItem key={item.id} data={item} />
                 ))}
@@ -25,7 +27,7 @@ const Experience = ({ datas }) => {
 };
 
 const TimeLineBox = styled(Box)`
-    padding-top: ${({ theme }) => theme.spacing(5)};
+    padding-top: ${({ theme }) => theme.spacing(4)};
 `;
 
 export default Experience;

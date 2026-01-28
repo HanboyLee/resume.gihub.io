@@ -8,7 +8,7 @@ const Skills = ({ datas }) => {
     return (
         <SkillBox>
             <Subject datas={datas} />
-            <Grid container textAlign={"center"} justifyContent={"space-evenly"}>
+            <Grid container spacing={3} textAlign={"center"} justifyContent={"center"}>
                 {datas.content.map((data) => (
                     <SkillItem key={data.id} data={data} />
                 ))}
@@ -16,22 +16,25 @@ const Skills = ({ datas }) => {
         </SkillBox>
     );
 };
+
 const SkillBox = styled(Box)`
-    padding-top: ${({ theme }) => theme.spacing(5)};
+    padding-top: ${({ theme }) => theme.spacing(4)};
 `;
 
 const SkillItem = ({ data }) => {
     const theme = useTheme();
     return (
-        <Grid item paddingY={3} sm={5} xs={11}>
-            <Card elevation={4}>
-                <SkillItemTitle style={theme.shape} variant="h6">
-                    {data.skill}
-                </SkillItemTitle>
+        <Grid item paddingY={2} xs={12} sm={6} md={4}>
+            <Card elevation={3}>
+                <SkillItemHeader style={theme.shape}>
+                    <SkillItemTitle variant="h6">
+                        {data.skill}
+                    </SkillItemTitle>
+                </SkillItemHeader>
                 <SkillDetail container>
                     {data.content.map((item, index) => (
-                        <Grid xs={12} sm={5} className="text" item key={index} style={theme.typography.body2}>
-                            {item}
+                        <Grid xs={12} className="text" item key={index}>
+                            <SkillTag>{item}</SkillTag>
                         </Grid>
                     ))}
                 </SkillDetail>
@@ -41,28 +44,61 @@ const SkillItem = ({ data }) => {
 };
 
 const Card = styled(Paper)`
-    padding: ${({ theme }) => theme.spacing(2)};
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: ${({ theme }) => theme.spacing(2.5)};
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: ${({ theme }) => theme.shape.borderRadius}px;
+    background: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%);
+    border: 2px solid transparent;
+
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: ${({ theme }) => theme.shadows[6]};
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        border-color: rgba(99, 102, 241, 0.2);
     }
+`;
+
+const SkillItemHeader = styled(Box)`
+    margin-bottom: ${({ theme }) => theme.spacing(2)};
+    padding: ${({ theme }) => theme.spacing(1.5)};
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    border-radius: 12px;
 `;
 
 const SkillItemTitle = styled(Typography)`
     display: inline-block;
-    padding: ${({ theme }) => theme.spacing(1)};
-    color: ${({ theme }) => theme.palette.background.default};
-    background-color: ${({ theme }) => theme.palette.text.primary};
+    padding: 0;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 `;
+
 const SkillDetail = styled(Grid)`
     justify-content: center;
-    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.spacing(1)};
+    padding: ${({ theme }) => theme.spacing(1)} 0;
+
     & .text {
-        padding-top: ${({ theme }) => theme.spacing(0.5)};
-        padding-bottom: ${({ theme }) => theme.spacing(0.5)};
-        letter-spacing: 0.5px !important;
+        display: flex;
+        justify-content: center;
+    }
+`;
+
+const SkillTag = styled(Box)`
+    padding: ${({ theme }) => theme.spacing(0.75)} ${({ theme }) => theme.spacing(1.5)};
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: 8px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.palette.text.primary};
+    transition: all 0.2s ease;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+
+    &:hover {
+        background: rgba(99, 102, 241, 0.15);
+        border-color: rgba(99, 102, 241, 0.3);
+        transform: scale(1.02);
     }
 `;
 
