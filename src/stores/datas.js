@@ -10,7 +10,7 @@ export const introduce = {
     title: "介绍",
     enTitle: "introduce",
     content:
-        "前职业与前端所学完全不同的领域，个人深觉网页开发的魅力除了丰富的开源码之外，前端工程师可与后端、UI、UX、SA、PO、PM多方讨论，可以一次了解各个职位工作的内容与定位，帮助解决专案完成与沟通的重要性。",
+        "拥有多年前后端开发经验的工程师，具备从零构建完整应用的能力。擅长使用 React、TypeScript、Electron 等技术栈开发企业级 Web 应用与桌面应用。对低代码平台、可视化编辑器、跨平台应用有深入实践经验。注重代码质量与用户体验，善于与团队协作，高效完成项目交付。",
 };
 
 export const experience = {
@@ -26,11 +26,12 @@ export const experience = {
             endsAt: "至今",
             content: [
                 "(前端工程师)",
+                "负责 CPM 项目（化工行业领域）的前端开发工作",
+                "开发低代码平台，实现组件化搭建功能",
+                "实现 SCADA 工艺流程图画布容器，支持用户自由拖拽绘制工艺流程图",
                 "使用 React、TypeScript、Ant Design 构建企业级 Web 应用",
-                "负责 Electron 桌面应用开发，实现跨平台功能",
-                "参与图片元数据管理系统（Metadata Desktop）的设计与实现",
-                "优化前端性能，提升用户体验",
-                "与后端团队协作，完成 API 集成和数据交互",
+                "优化前端性能与交互体验，提升用户操作效率",
+                "与后端团队紧密协作，完成 API 集成与数据交互",
             ],
         },
         {
@@ -133,7 +134,7 @@ export const products = {
             codeUrl: "https://github.com/HanboyLee/electorn-mircotools",
             githubUrl: "https://github.com/HanboyLee/electorn-mircotools",
             art: ["Electron", "React", "TypeScript", "Ant Design", "ExifTool", "OpenAI API"],
-            description: "基于 Electron 的跨平台桌面应用，用于图片元数据的批量处理与管理，集成 AI 智能分析功能",
+            description: "个人业余时间开发的跨平台桌面应用，集成 ExifTool 与 OpenAI API，实现图片元数据的批量读取、编辑与管理，支持 CSV 导出与文件打包功能",
         },
         {
             id: uuidv4(),
@@ -142,7 +143,7 @@ export const products = {
             codeUrl: "https://github.com/HanboyLee/NeteaseMusicDemo",
             githubUrl: "https://netease-music-demo.vercel.app",
             art: ["HTML", "CSS", "JavaScript", "React", "Antd", "Redux", "Redux-toolkit", "Axios"],
-            description: "高保真复刻网易云音乐 Web 版，实现音乐播放、歌单管理、搜索等核心功能",
+            description: "完整复刻网易云音乐 Web 界面与交互，实现音乐播放、歌单管理、搜索推荐、个人中心等核心功能，采用 Redux Toolkit 进行状态管理",
         },
         {
             id: uuidv4(),
@@ -151,7 +152,7 @@ export const products = {
             githubUrl: "https://hanboylee.github.io/staticWebWithBootstrap.gihub.io/",
             codeUrl: "https://github.com/HanboyLee/staticWebWithBootstrap.gihub.io",
             art: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
-            description: "基于 React 和 Bootstrap 的静态网页，展示基础前端开发能力",
+            description: "使用 React 与 Bootstrap 构建的响应式静态网站，展示基础前端布局与组件开发能力",
         },
     ],
 };
